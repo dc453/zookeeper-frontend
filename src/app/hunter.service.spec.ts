@@ -33,23 +33,29 @@ describe('HunterService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return all hunter type data', () => {
+  it('should return all hunter type data', (done: DoneFn) => {
     const hunters = service.getHunters()
       .subscribe((data) => {
         expect(data).toEqual(expectedHunters);
+        done();
       });
 
     const req = httpTestingController.expectOne('/assets/hunters.json');
     req.flush(expectedHunters);
   });
 
-  it('should return requested hunter type data', () => {
+  it('should return requested hunter type data', (done: DoneFn) => {
     const hunter = service.getHunter('chosen')
       .subscribe((data) => {
         expect(data).toEqual(expectedHunters[0]);
+        done();
       });
 
     const req = httpTestingController.expectOne('/assets/hunters.json');
     req.flush(expectedHunters);
+  });
+
+  it('should cache requested hunter data', () => {
+
   });
 });

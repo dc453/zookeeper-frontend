@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatListModule } from '@angular/material/list';
+import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 
 import { SelectHunterTypeComponent } from './select-hunter-type.component';
@@ -23,7 +24,10 @@ describe('SelectHunterTypeComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [ SelectHunterTypeComponent ],
-      imports: [ MatListModule ],
+      imports: [ 
+        MatListModule,
+        RouterTestingModule
+      ],
       providers: [ { provide: HunterService, useValue: hunterService } ]
     })
     .compileComponents();
