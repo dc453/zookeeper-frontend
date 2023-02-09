@@ -1,18 +1,21 @@
 [
     {
         "id": "chosen",
+        "name": "The Chosen",
         "description": "a once-ordinary person who discovered they have a special destiny, and who has been given the power to accomplish it. The Chosen is good in a fight, with some weird powers. E.g. Buffy from Buffy the Vampire Slayer.",
         "characterization": "Your birth was prophesied. You are the Chosen One, and with your abilities you can save the world. If you fail, all will be destroyed. It all rests on you. Only you.",
         "instructions": "To make your Chosen, first pick a name. Then follow the instructions below to decide your look, ratings, fate, moves, gear, and your special weapon. Finally, introduce yourself and pick history."
     },
     {
         "id": "crooked",
+        "name": "The Crooked",
         "description": "a criminal turned monster hunter, haunted by their past and enemies. The Crooked is good in social situations and has a lot of contacts. E.g. Anna Valmont from The Dresden Files, Peter Bishop from Fringe.",
         "characterization": "\"Yeah, I've been around the block. A bit of this, a bit of that. When I came across the secret underworld of monsters and magic… well… it wasn't so different from the underworld I already knew. It was easy to find an angle, just like before.\"",
         "instructions": "To make your Crooked, pick a name. Then follow the instructions below to decide your look, ratings, background, heat, underworld, moves, and gear. Finally, introduce yourself and pick history."
     },
     {
         "id": "divine",
+        "name": "The Divine",
         "description": "an agent of a higher power, with a mission to fulfill. The Divine is very tough and has been granted holy powers. E.g. Castiel from Supernatural; Michael Carpenter from The Dresden Files.",
         "characterization": "I am the Light, the Sword.<br />I am sent to defend the meek from Darkness.<br />All Evil fears me, for I am its end.",
         "instructions": "To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history."
