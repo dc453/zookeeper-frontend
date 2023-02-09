@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 import { Hunter } from './hunter';
 
@@ -16,6 +16,9 @@ export class HunterService {
   }
 
   getHunter(hunter: string): Observable<Hunter> {
-    return of({name: 'foo', id: 'foo'})
+    return this.getHunters()
+      .pipe(
+        map(result => result.filter(curHunter => curHunter.id === hunter)[0])
+      );
   }
 }

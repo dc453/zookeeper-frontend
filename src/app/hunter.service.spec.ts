@@ -9,6 +9,12 @@ describe('HunterService', () => {
   let httpTestingController: HttpTestingController
   let service: HunterService;
 
+  const expectedHunters = [
+    { "id": "chosen", name: "The Chosen" },
+    { "id": "crook", name: "The Crook" },
+    { "id": "divine", name: "The Divine" }
+  ];
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
@@ -27,16 +33,20 @@ describe('HunterService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return all hunter types', () => {
-    const expectedHunters = [
-      { "id": "chosen", name: "The Chosen" },
-      { "id": "crook", name: "The Crook" },
-      { "id": "divine", name: "The Divine" }
-    ];
-
+  it('should return all hunter type data', () => {
     const hunters = service.getHunters()
       .subscribe((data) => {
         expect(data).toEqual(expectedHunters);
+      });
+
+    const req = httpTestingController.expectOne('/assets/hunters.json');
+    req.flush(expectedHunters);
+  });
+
+  it('should return requested hunter type data', () => {
+    const hunter = service.getHunter('chosen')
+      .subscribe((data) => {
+        expect(data).toEqual(expectedHunters[0]);
       });
 
     const req = httpTestingController.expectOne('/assets/hunters.json');
