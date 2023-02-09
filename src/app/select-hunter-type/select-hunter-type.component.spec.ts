@@ -4,11 +4,12 @@ import { of } from 'rxjs';
 
 import { SelectHunterTypeComponent } from './select-hunter-type.component';
 import { HunterService } from '../hunter.service';
+import { Hunter } from '../hunter';
 
 describe('SelectHunterTypeComponent', () => {
   let component: SelectHunterTypeComponent;
   let fixture: ComponentFixture<SelectHunterTypeComponent>;
-  let testHunters: { id: string, name: string }[];
+  let testHunters: Hunter[];
 
   beforeEach(async () => {
     testHunters = [

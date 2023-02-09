@@ -29,9 +29,9 @@ describe('HunterService', () => {
 
   it('should return all hunter types', () => {
     const expectedHunters = [
-      { "id": "chosen" },
-      { "id": "crook" },
-      { "id": "divine" }
+      { "id": "chosen", name: "The Chosen" },
+      { "id": "crook", name: "The Crook" },
+      { "id": "divine", name: "The Divine" }
     ];
 
     const hunters = service.getHunters()
