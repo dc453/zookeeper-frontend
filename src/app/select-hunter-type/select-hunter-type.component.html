@@ -1,6 +1,6 @@
 <h2>Select Hunter Type</h2>
 <mat-list>
     <mat-list-item *ngFor="let hunter of hunterOptions">
-        <span>{{ hunter.name }}</span>
+        <a [routerLink]="'/new/' + hunter.id" [title]="hunter.name">{{ hunter.name }}</a>
     </mat-list-item>
 </mat-list>
