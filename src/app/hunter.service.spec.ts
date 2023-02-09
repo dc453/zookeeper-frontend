@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { map } from 'rxjs';
 
 import { HunterService } from './hunter.service';
 
@@ -33,22 +34,20 @@ describe('HunterService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return all hunter type data', (done: DoneFn) => {
+  it('should return all hunter type data', () => {
     const hunters = service.getHunters()
       .subscribe((data) => {
         expect(data).toEqual(expectedHunters);
-        done();
       });
 
     const req = httpTestingController.expectOne('/assets/hunters.json');
     req.flush(expectedHunters);
   });
 
-  it('should return requested hunter type data', (done: DoneFn) => {
+  it('should return requested hunter type data', () => {
     const hunter = service.getHunter('chosen')
       .subscribe((data) => {
         expect(data).toEqual(expectedHunters[0]);
-        done();
       });
 
     const req = httpTestingController.expectOne('/assets/hunters.json');
@@ -56,6 +55,14 @@ describe('HunterService', () => {
   });
 
   it('should cache requested hunter data', () => {
+    service.getHunters()
+      .subscribe(() => {});
 
+    const req = httpTestingController.expectOne('/assets/hunters.json')
+    req.flush(expectedHunters);
+
+    service.getHunter('chosen')
+        .subscribe(() => {});
+    httpTestingController.verify();
   });
 });

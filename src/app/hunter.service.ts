@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, map, of, tap } from 'rxjs';
 
 import { Hunter } from './hunter';
 
@@ -9,10 +9,20 @@ import { Hunter } from './hunter';
 })
 export class HunterService {
 
+  hunters: Hunter[] | null = null;
+
   constructor(private http: HttpClient) { }
 
   getHunters(): Observable<Hunter[]> {
-    return this.http.get<Hunter[]>('/assets/hunters.json');
+    if (this.hunters !== null) {
+      return of(this.hunters);
+    }
+    return this.http.get<Hunter[]>('/assets/hunters.json')
+      .pipe(
+        tap((data) => {
+          this.hunters = data
+        })
+      );
   }
 
   getHunter(hunter: string): Observable<Hunter> {
