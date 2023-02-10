@@ -7,6 +7,7 @@ export interface Hunter {
     look_group1?: string[];
     look_group2?: string[];
     look_group3?: string[];
+    rating_options?: Ratings[];
 }
 
 export interface Ratings {

@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { SelectCharacterComponent } from './select-character/select-character.component';
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { SelectHunterTypeComponent } from './select-hunter-type/select-hunter-type.component';
+import { RatingsOptionPipe } from './ratings-option.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SelectHunterTypeComponent } from './select-hunter-type/select-hunter-ty
     SelectCharacterComponent,
     CreateCharacterComponent,
     SelectHunterTypeComponent,
+    RatingsOptionPipe,
   ],
   imports: [
     BrowserModule,
