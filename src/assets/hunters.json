@@ -14,13 +14,19 @@
         "name": "The Crooked",
         "description": "a criminal turned monster hunter, haunted by their past and enemies. The Crooked is good in social situations and has a lot of contacts. E.g. Anna Valmont from The Dresden Files, Peter Bishop from Fringe.",
         "characterization": "\"Yeah, I've been around the block. A bit of this, a bit of that. When I came across the secret underworld of monsters and magic… well… it wasn't so different from the underworld I already knew. It was easy to find an angle, just like before.\"",
-        "instructions": "To make your Crooked, pick a name. Then follow the instructions below to decide your look, ratings, background, heat, underworld, moves, and gear. Finally, introduce yourself and pick history."
+        "instructions": "To make your Crooked, pick a name. Then follow the instructions below to decide your look, ratings, background, heat, underworld, moves, and gear. Finally, introduce yourself and pick history.",
+        "look_group1": [ "Man", "Woman", "Concealed" ],
+        "look_group2": [ "Hard eyes", "Friendly eyes", "Watchful eyes", "Smiling eyes", "Calculating eyes" ],
+        "look_group3": [ "Street wear", "Tailored suit", "Cheap suit", "Tracksuit", "Nondescript clothes" ]
     },
     {
         "id": "divine",
         "name": "The Divine",
         "description": "an agent of a higher power, with a mission to fulfill. The Divine is very tough and has been granted holy powers. E.g. Castiel from Supernatural; Michael Carpenter from The Dresden Files.",
         "characterization": "I am the Light, the Sword.<br />I am sent to defend the meek from Darkness.<br />All Evil fears me, for I am its end.",
-        "instructions": "To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history."
+        "instructions": "To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history.",
+        "look_group1": [ "Man", "Woman", "Androgynous", "Asexual" ],
+        "look_group2": [ "Blazing eyes", "Terrifying eyes", "Placid eyes", "Sparkling eyes", "Perceptive eyes", "Starry eyes", "Glowing eyes" ],
+        "look_group3": [ "Dirty clothes", "Perfect suit", "Rumpled suit", "Casual clothes", "Practical clothes" ]
     }
 ]
