@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 import { of } from 'rxjs';
 
 import { CreateCharacterComponent } from './create-character.component';
@@ -26,6 +28,10 @@ describe('CreateCharacterComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [ CreateCharacterComponent ],
+      imports: [
+        ReactiveFormsModule,
+        MatRadioModule
+      ],
       providers: [
         { provide: HunterService, useValue: hunterService },
         { provide: ActivatedRoute, useValue: activatedRouteSpy }

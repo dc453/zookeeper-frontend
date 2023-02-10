@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Hunter } from '../hunter';
+import { FormBuilder } from '@angular/forms';
 
 import { HunterService } from '../hunter.service';
+import { Hunter } from '../hunter';
 
 @Component({
   selector: 'app-create-character',
@@ -14,9 +15,14 @@ export class CreateCharacterComponent {
   hunterInfo!: Hunter;
   hunterType: string = "";
 
+  createCharacterForm = this.formBuilder.group({
+
+  });
+
   constructor(
     private hunterService: HunterService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
   ) {}
 
   ngOnInit() {
@@ -24,8 +30,11 @@ export class CreateCharacterComponent {
     this.hunterService.getHunter(hunterType)
       .subscribe(data => {
         this.hunterInfo = data;
-        this.hunterType = data.name;
       });
+  }
+
+  onSubmit(): void {
+
   }
 
 }

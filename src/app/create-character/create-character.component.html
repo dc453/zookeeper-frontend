@@ -1,1 +1,22 @@
-<h2>Create {{ hunterType }}</h2>
+<h2>Create {{ hunterInfo.name }}</h2>
+<p class="characterization">{{ hunterInfo.characterization }}</p>
+<p class="instructions">{{ hunterInfo.instructions }}</p>
+
+<form [formGroup]="createCharacterForm" (ngSubmit)="onSubmit()">
+    <h3>Look, pick one from each list:</h3>
+    <mat-radio-group name="look1">
+        <mat-radio-button *ngFor="let item of hunterInfo.look_group1; let i = index;" [value]="i">
+            {{ item }}
+        </mat-radio-button>
+    </mat-radio-group>
+    <mat-radio-group name="look2">
+        <mat-radio-button *ngFor="let item of hunterInfo.look_group2; let i = index;" [value]="i">
+            {{ item }}
+        </mat-radio-button>
+    </mat-radio-group>
+    <mat-radio-group name="look3">
+        <mat-radio-button *ngFor="let item of hunterInfo.look_group3; let i = index;" [value]="i">
+            {{ item }}
+        </mat-radio-button>
+    </mat-radio-group>
+</form>
