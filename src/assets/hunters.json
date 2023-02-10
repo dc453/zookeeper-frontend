@@ -7,7 +7,14 @@
         "instructions": "To make your Chosen, first pick a name. Then follow the instructions below to decide your look, ratings, fate, moves, gear, and your special weapon. Finally, introduce yourself and pick history.",
         "look_group1": [ "Man", "Woman", "Boy", "Girl", "Androgynous" ],
         "look_group2": [ "Fresh face", "Haggard face", "Young face", "Haunted face", "Hopeful face", "Controlled face" ],
-        "look_group3": [ "Preppy clothes", "Casual wear", "Urban wear", "Normal clothes", "Neat clothes", "Street wear" ]
+        "look_group3": [ "Preppy clothes", "Casual wear", "Urban wear", "Normal clothes", "Neat clothes", "Street wear" ],
+        "rating_options": [
+            { "charm": 2, "cool": -1, "sharp": 1, "tough": 2, "weird": -1 },
+            { "charm": -1, "cool": 2, "sharp": 1, "tough": 2, "weird": -1 },
+            { "charm": 1, "cool": 2, "sharp": 1, "tough": 1, "weird": -1 },
+            { "charm": -1, "cool": 1, "sharp": 2, "tough": -1, "weird": 2 },
+            { "charm": 1, "cool": 2, "sharp": -1, "tough": -1, "weird": 2 }
+        ]
     },
     {
         "id": "crooked",
@@ -17,7 +24,14 @@
         "instructions": "To make your Crooked, pick a name. Then follow the instructions below to decide your look, ratings, background, heat, underworld, moves, and gear. Finally, introduce yourself and pick history.",
         "look_group1": [ "Man", "Woman", "Concealed" ],
         "look_group2": [ "Hard eyes", "Friendly eyes", "Watchful eyes", "Smiling eyes", "Calculating eyes" ],
-        "look_group3": [ "Street wear", "Tailored suit", "Cheap suit", "Tracksuit", "Nondescript clothes" ]
+        "look_group3": [ "Street wear", "Tailored suit", "Cheap suit", "Tracksuit", "Nondescript clothes" ],
+        "rating_options": [
+            { "charm": 1, "cool": 1, "sharp": 2, "tough": 0, "weird": -1 },
+            { "charm": -1, "cool": 1, "sharp": 1, "tough": 2, "weird": 0 },
+            { "charm": -1, "cool": 2, "sharp": 2, "tough": 0, "weird": -1 },
+            { "charm": 2, "cool": 1, "sharp": 1, "tough": 0, "weird": -1 },
+            { "charm": 2, "cool": 0, "sharp": 1, "tough": -1, "weird": 1 }
+        ]
     },
     {
         "id": "divine",
@@ -27,6 +41,13 @@
         "instructions": "To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history.",
         "look_group1": [ "Man", "Woman", "Androgynous", "Asexual" ],
         "look_group2": [ "Blazing eyes", "Terrifying eyes", "Placid eyes", "Sparkling eyes", "Perceptive eyes", "Starry eyes", "Glowing eyes" ],
-        "look_group3": [ "Dirty clothes", "Perfect suit", "Rumpled suit", "Casual clothes", "Practical clothes" ]
+        "look_group3": [ "Dirty clothes", "Perfect suit", "Rumpled suit", "Casual clothes", "Practical clothes" ],
+        "rating_options": [
+            { "charm": 1, "cool": 1, "sharp": -1, "tough": 2, "weird": 0 },
+            { "charm": -1, "cool": 2, "sharp": -1, "tough": 2, "weird": 0 },
+            { "charm": -1, "cool": 0, "sharp": 1, "tough": 2, "weird": 1 },
+            { "charm": 1, "cool": 1, "sharp": 0, "tough": 2, "weird": -1 },
+            { "charm": -1, "cool": 1, "sharp": 0, "tough": 2, "weird": 1 }
+        ]
     }
 ]
