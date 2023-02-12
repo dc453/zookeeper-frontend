@@ -3,6 +3,13 @@
 <p class="instructions">{{ hunterInfo.instructions }}</p>
 
 <form [formGroup]="createCharacterForm" (ngSubmit)="onSubmit()">
+    <div class="form-group form-group-name">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput />
+        </mat-form-field>
+    </div>
+
     <div class="form-group form-group-look">
         <h3>Look, pick one from each list:</h3>
         <mat-radio-group name="look1">

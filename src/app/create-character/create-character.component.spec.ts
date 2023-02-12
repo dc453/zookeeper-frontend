@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { of } from 'rxjs';
 
@@ -30,6 +32,8 @@ describe('CreateCharacterComponent', () => {
       declarations: [ CreateCharacterComponent ],
       imports: [
         ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatInputModule,
         MatRadioModule
       ],
       providers: [
