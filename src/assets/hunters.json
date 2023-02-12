@@ -14,7 +14,48 @@
             { "charm": 1, "cool": 2, "sharp": 1, "tough": 1, "weird": -1 },
             { "charm": -1, "cool": 1, "sharp": 2, "tough": -1, "weird": 2 },
             { "charm": 1, "cool": 2, "sharp": -1, "tough": -1, "weird": 2 }
-        ]
+        ],
+        "fate": {
+            "how_you_found_out": [
+                "Nightmares and visions",
+                "Some weirdo told you",
+                "An ancient cult found you",
+                "Sought out by your nemesis",
+                "Attacked by monsters",
+                "Trained from birth",
+                "You found the prophecy"
+            ],
+            "heroic": [
+                "Sacrifice",
+                "You are the Champion",
+                "Visions",
+                "Secret training",
+                "Magical powers",
+                "Mystical inheritance",
+                "A normal life",
+                "True love",
+                "You can save the world",
+                "Hidden allies",
+                "The end of monsters",
+                "Divine help"
+            ],
+            "doom": [
+                "Death",
+                "You can’t save everyone",
+                "Impossible love",
+                "Failure",
+                "A nemesis",
+                "No normal life",
+                "Loss of loved ones",
+                "Treachery",
+                "Doubt",
+                "Sympathy with the enemy",
+                "Damnation",
+                "Hosts of monsters",
+                "The end of days",
+                "The source of Evil"
+            ]
+        }
     },
     {
         "id": "crooked",

@@ -12,11 +12,22 @@ import { Hunter } from '../hunter';
 })
 export class CreateCharacterComponent {
 
-  hunterInfo!: Hunter;
+  hunterInfo: Hunter | null = null;
   hunterType: string = "";
 
   createCharacterForm = this.formBuilder.group({
-
+    characterName: [''],
+    look: this.formBuilder.group({
+      look1: [null],
+      look2: [null],
+      look3: [null]
+    }),
+    ratingsOption: [null],
+    fate: this.formBuilder.group({
+      howYouFoundOut: [null],
+      heroic: [null],
+      doom: [null]
+    })
   });
 
   constructor(
@@ -34,7 +45,7 @@ export class CreateCharacterComponent {
   }
 
   onSubmit(): void {
-
+    console.log(this.createCharacterForm.value);
   }
 
 }

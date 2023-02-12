@@ -8,6 +8,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +39,8 @@ import { RatingsOptionPipe } from './ratings-option.pipe';
     MatToolbarModule,
     MatInputModule,
     MatRadioModule,
+    MatCheckboxModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
